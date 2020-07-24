@@ -63,7 +63,7 @@ var lightToDarkRed = function(activeCases) {
 
 async function fetchStates() {
     try {
-        const response = await fetch("/data/states.json");
+        const response = await fetch("data/states.json");
         const data = await response.json();
         return data.states;
     } catch (error) {
