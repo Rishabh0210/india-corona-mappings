@@ -112,11 +112,12 @@ async function updateMap(tab) {
             var activeCases = totalCases -  cured - deaths;
 
             if(tab == 2) {          //recovery rates
-                if(totalCases == 0)
-                    return;
                 var pctRecovered = (cured/totalCases);
                 var color = greenToRedColors(pctRecovered)
 
+                if(totalCases == 0)
+                    color = greenToRedColors(1);
+                    
                 var marker = new mapboxgl.Marker({
                     draggable: false,
                     color : color
