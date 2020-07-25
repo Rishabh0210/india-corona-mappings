@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India-Corona-Cases</title>
+    <link rel="icon" href="/data/favicon2.jpg" type="image/gif" sizes="16x16">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="javascript:updateMap(1)">Active Cases</a></li>
+            <li><a href="javascript:updateMap(2)">Recovery Rate</a></li>
+            <li><a href="javascript:updateMap(3)">Deaths</a></li>
+        </ul>
+    </nav>
+    <div id="map"></div>
+</body>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1Ijoicml6emViIiwiYSI6ImNrY3VhYTZlMzI2ZTgyem1vcTR2OXRoZHIifQ.0ueSt-isDH3yOZqxc4MkCw';
+
+  var bounds = [
+      [65,0.0],
+      [100,43.3]
+  ];
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    zoom: 1,
+    maxBounds: bounds 
+  });
+</script>
+
+<script src = "/js/index.js"></script>
+<script>window.updateMap();</script>
+</html>

@@ -5,37 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>India-Corona-Cases</title>
     <link rel="icon" href="data/favicon2.jpg" type="image/gif" sizes="16x16">
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type = "text/css" href="css/index.css">
 </head>
 <body>
-    <nav id="navbar">
-        <ul>
-            <li><a href="javascript:updateMap(1)">Active Cases</a></li>
-            <li><a href="javascript:updateMap(2)">Recovery Rate</a></li>
-            <li><a href="javascript:updateMap(3)">Deaths</a></li>
-        </ul>
-        <h5>Zoom IN | Tap/Click on pegs for more info.</h5>
-    </nav>
-    <div id="map"></div>
+    <div class="container">
+        <h3>Guidelines for this site</h3>
+        <p>The site shows following parameters on the map of <span style="font-weight: bold;">India</span></p>
+        <p>
+            <ul>
+                <li>Active Cases</li>
+                <li>Recovery Rate</li>
+                <li>Deaths</li>
+            </ul>
+        </p>
+        <p>The information will be <span style="font-weight: bold;">state-wise</span>. If you find any trouble seeing the particular location of India, then just Zoom In to that location.</p>
+        <p>Tap/Click on the peg points to know more info.</p>
+
+        <h5>Color Scheme</h5>
+
+        <p>For the active cases: <span style="color:red; font-weight: bold;">Red</span> means the most active cases in that area, followed by the <span style="color: maroon; font-weight: bold;">Crimson</span>, <span style="color: brown; font-weight: bold;">Brown</span> and <span style="font-weight: bold;">Black</span> with the least active cases.</p>
+
+        <p>For the recovery rate: <span style="color: green; font-weight: bold;">Green</span> means the highest percentage of recovery, followed by the <span style="color: yellowgreen; font-weight: bold;">Lemon yellow</span>, <span style="color: #a9a900;; font-weight: bold;">Yellow</span>, <span style="color: orange; font-weight: bold;">Orange</span> and <span style="color: red; font-weight: bold;">Red</span> being the lowest recovery rate.</p>
+
+        <p>For the deaths: <span style="color: #4B0082; font-weight: bold;">Indigo</span> means the most deaths, followed by <span style="color: #8B008B; font-weight: bold;">Purple</span>, <span style="color: #8A2BE2; font-weight: bold;">Violet</span>, and <span style="color: 	#D8BFD8; font-weight: bold;">Lavender</span> means the least deaths.</p>
+
+        <p id ="main">Now the main site is: <em><a href="html/maps.html">Corona Plots</a></em></p>
+        
+    </div>
 </body>
-
-<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
-<script>
-  mapboxgl.accessToken = 'pk.eyJ1Ijoicml6emViIiwiYSI6ImNrY3VhYTZlMzI2ZTgyem1vcTR2OXRoZHIifQ.0ueSt-isDH3yOZqxc4MkCw';
-
-  var bounds = [
-      [65,0.0],
-      [100,43.3]
-  ];
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    zoom: 1,
-    maxBounds: bounds 
-  });
-</script>
-
-<script src = "js/index.js"></script>
-<script>window.updateMap();</script>
 </html>
